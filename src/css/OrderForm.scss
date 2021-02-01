@@ -1,0 +1,182 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$input-color: #ebebeb;
+$text-color: #040707;
+$form-font: 'Montserrat',
+sans-serif;
+
+.order-form {
+    margin: 0 50px;
+    font-family: $form-font;
+    color: $text-color;
+}
+
+.order-form__header {
+    font-size: 41px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.order-form__form {
+    margin-top: 45px;
+}
+
+.order-form__contacts {
+    width: 930px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) { 
+        width: 100%;
+     }
+}
+
+
+
+.order-form__input {
+    background-color: $input-color;
+    border-radius: 18px;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    margin: 14px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.order-form__name {
+    width: 450px;
+
+    @include media-breakpoint-down(lg) { 
+        width: 100%;
+     }
+}
+
+.order-form__input::placeholder {
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 31px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.order-form__radio-group {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.order-form__payment {
+    margin-top: 80px;
+}
+
+.order-form__radio-group-legend {
+    font-size: 31px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    position: relative;
+    left: -20px;
+    margin-bottom: 35px;
+}
+
+.order-form__radio-label {
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.order-form__radio-span {
+    font-weight: 500;
+}
+
+.order-form__radio {
+    display: none;
+}
+
+.order-form__radio-label:before {
+    position: absolute;
+    left: -20px;
+    top: 7px;
+    content: '';
+    width: 0.8em;
+    height: 0.8em;
+    border: 1px solid #adadad;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.order-form__radio:checked+.order-form__radio-label:before {
+    background: #ffb14d;
+}
+
+.order-form__checkbox-group {
+    margin-top: 40px;
+}
+
+.order-form__checkbox-label {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-left: 10px;
+}
+
+.order-form__checkbox {
+    display: none;
+}
+
+.order-form__checkbox-label:before {
+    position: absolute;
+    right: 370px;
+    left: auto;
+    top: 5px;
+    content: '';
+    width: 0.8em;
+    height: 0.8em;
+    border: 1px solid #adadad;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.order-form__checkbox:checked+.order-form__checkbox-label:before {
+    background: #ffb14d;
+}
+
+.order-form__agree-and-submit {
+    text-align: right;
+}
+
+.order-form__submit {
+    background-color: $text-color;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #f5f4f3;
+    width: 280px;
+    height: 65px;
+    border-radius: 35px 30px 30px 30px;
+}
+
+.order-form__final-sum {
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.order-form__delivery-cost {
+    font-size: 15px;
+line-height: 1.2;
+font-weight: 500;
+letter-spacing: 0.02em;
+}
